@@ -1,4 +1,4 @@
-package easy;
+package Recursion.easy;
 import java.util.Scanner;
 public class Nto1{
     public static void main(String[] args) {

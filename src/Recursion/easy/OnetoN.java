@@ -1,4 +1,4 @@
-package easy;
+package Recursion.easy;
 import java.util.Scanner;
 public class OnetoN {
     public static void main(String[] args) {

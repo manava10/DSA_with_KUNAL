@@ -1,3 +1,5 @@
+package Maths;
+
 // Printing prime Number from 1 to a given n.
 //Time complexity is Root n
 import java.util.Scanner;

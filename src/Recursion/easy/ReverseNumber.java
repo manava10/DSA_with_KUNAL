@@ -1,4 +1,4 @@
-package easy;
+package Recursion.easy;
 public class ReverseNumber {
     public static void main(String[] args) {
         reverseNumber(182);

@@ -1,4 +1,4 @@
-package easy;
+package Recursion.easy;
 //This is Easy question for array Reversal.
 public class Arry {
     public static void main(String[] args) {

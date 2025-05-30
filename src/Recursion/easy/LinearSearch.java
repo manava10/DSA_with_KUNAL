@@ -1,4 +1,4 @@
-package easy;
+package Recursion.easy;
 //LinearSearch with Recursion.
 public class LinearSearch {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class AlphabetValue {
     public static void main(String[] args) {
         char letter = 'b'; // Example letter

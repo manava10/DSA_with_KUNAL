@@ -1,4 +1,4 @@
-package String;
+package Recursion.String;
 public class skipChar{
     public static void main(String[] args){
         String a = "aabbccddaba";

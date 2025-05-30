@@ -1,4 +1,4 @@
-package easy;
+package Recursion.easy;
 import java.util.List;
 import java.util.ArrayList;
 public class ArrayList2{

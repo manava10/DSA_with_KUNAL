@@ -1,3 +1,5 @@
+package Maths;
+
 import java.util.Scanner;
 public class SimpleSieve {
     public static void main(String[] args) {

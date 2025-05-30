@@ -1,4 +1,4 @@
-package easy;
+package Recursion.easy;
 
 public class SumNto1 {
     public static void main(String[] args) {

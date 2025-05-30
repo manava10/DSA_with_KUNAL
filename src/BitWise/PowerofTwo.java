@@ -1,3 +1,4 @@
+package BitWise;
 import java.util.Scanner;
 public class PowerofTwo {
     public static void main(String[] args) {

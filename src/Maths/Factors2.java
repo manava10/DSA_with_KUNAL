@@ -1,3 +1,4 @@
+package Maths;
 import java.util.Scanner;
 public class Factors2 {
     public static void main(String[] args) {
