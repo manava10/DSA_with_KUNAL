@@ -18,7 +18,7 @@ public class NKnight {
         if (knightsRemaining == 0) {
             display(board);
             System.out.println();
-            return 1;
+            return (1+0);
         }
 
         if (row == board.length) return 0;
