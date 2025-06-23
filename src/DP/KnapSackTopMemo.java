@@ -24,10 +24,10 @@ public class KnapSackTopMemo {
 
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-        int[] wt = {1,2,3,4};
-        int[] value = {2,5,2,4};
+        int[] wt = {2,4,1,5,8,3};
+        int[] value = {8,6,10,9,7,3};
+        int W = 14;
         int n = wt.length;
-        int W = 10;
         int[][] dp = new int[n+1][W+1];
         for(int[] rows:dp){
             Arrays.fill(rows,-1);

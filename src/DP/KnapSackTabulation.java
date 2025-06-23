@@ -22,13 +22,17 @@ public class KnapSackTabulation{
         return dp[n][W];
     }
     public static void main(String[] args) {
-        int[] wt = {1,2,3,5,8};
-        int[] val = {4,7,2,8,6};
+        long startTime = System.nanoTime();
+        int[] wt = {1,2,3,5};
+        int[] val = {4,7,2,8};
         int W = 10;
         int n = wt.length;
         int[][] dp = new int[n+1][W+1];
         int maxProfit = knapSack(wt,val,W,n,dp);
         System.out.println("Max Profit:"+maxProfit);
+        long endTime = System.nanoTime();    // End time
+        long duration = endTime - startTime;
+        System.out.println("Execution time in milliseconds: " + (duration / 1_000_000.0) + " ms");// Time taken in nanoseconds
 
     }
 }

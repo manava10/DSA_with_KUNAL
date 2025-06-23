@@ -14,8 +14,8 @@ public class KnapSackRecursion{
     }
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-        int[] wt = {1,2,3,5};
-        int[] val = {3,5,2,9};
+        int[] wt = {1,2,3,5,2,6};
+        int[] val = {3,5,2,9,4,6};
         int W = 10;
         int maxProfit = knapSack(wt,val,W,wt.length);
         System.out.println("Maximum Value: "+ maxProfit);
