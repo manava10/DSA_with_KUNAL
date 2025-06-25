@@ -1,5 +1,5 @@
 package DP;
-public class SubsetSum{
+public class SubsetSumMemo {
     public static boolean knapSack(int[] arr,int n, int target, boolean[][] dp){
         //first lets cover the base case;
         for(int i =0;i<=n;i++){
