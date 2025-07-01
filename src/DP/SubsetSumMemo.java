@@ -18,7 +18,7 @@ public class SubsetSumMemo {
         for(int i=1;i<=n;i++){
             for(int j=1;j<=target;j++){
                 if(arr[i-1]<=j){
-                    //Then we will have two options eithere to take that one or to leave that one .
+                    //Then we will have two options either to take that one or to leave that one .
                     dp[i][j] = dp[i-1][j] || dp[i-1][j-arr[i-1]];
                 }else{
                     dp[i][j] = dp[i-1][j];
