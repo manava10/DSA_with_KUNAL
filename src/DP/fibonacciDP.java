@@ -47,7 +47,7 @@ public class fibonacciDP{
         dp[0] = 0;
         dp[1] = 1;
         for(int i=2;i<=n;i++){
-            dp[i] = dp[i-1] + dp[i-2];
+            dp[i] = dp[i-1] + dp[i-2]; //This is one directional Dynammic Programming , There is no need or two matrix or Array here.
         }
         return dp[n];
     }
