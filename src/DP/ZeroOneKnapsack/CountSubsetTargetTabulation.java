@@ -1,5 +1,5 @@
-package DP;
-class CountSubsetTarget{
+package DP.ZeroOneKnapsack;
+class CountSubsetTargetTabulation {
     public static void main(String[] args) {
         int[] arr = {1,2,3,5,8};
         int target = 5;
