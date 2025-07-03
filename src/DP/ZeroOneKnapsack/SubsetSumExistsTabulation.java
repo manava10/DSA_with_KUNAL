@@ -1,5 +1,5 @@
 package DP.ZeroOneKnapsack;
-public class SubsetSumTabulation {
+public class SubsetSumExistsTabulation {
     public static void main(String[] args) {
         //SO we are give a sum and a target and we have to chek if it can create
         int[] arr = {3,4,5,1,9};
