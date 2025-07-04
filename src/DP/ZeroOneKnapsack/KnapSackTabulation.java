@@ -19,13 +19,21 @@ public class KnapSackTabulation{
 
             }
         }
+        //I wannt print the dynamic Programming Table, Let's Do it . Yay..
+        System.out.println("DP Table:");
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= W; j++) {
+                System.out.print(dp[i][j] + "\t"); // tab for better alignment
+            }
+            System.out.println();
+        }
         return dp[n][W];
     }
     public static void main(String[] args) {
         long startTime = System.nanoTime();
-        int[] wt = {1,2,3,5};
-        int[] val = {4,7,2,8};
-        int W = 10;
+        int[] wt = {1,2,3};
+        int[] val = {10,15,40};
+        int W = 5;
         int n = wt.length;
         int[][] dp = new int[n+1][W+1];
         int maxProfit = knapSack(wt,val,W,n,dp);
@@ -33,6 +41,5 @@ public class KnapSackTabulation{
         long endTime = System.nanoTime();    // End time
         long duration = endTime - startTime;
         System.out.println("Execution time in milliseconds: " + (duration / 1_000_000.0) + " ms");// Time taken in nanoseconds
-
     }
 }
