@@ -18,6 +18,14 @@ class RodCutting2{
                 }
             }
         }
+        for(int i=0;i<=n;i++){
+            for(int j=0;j<=N;j++) {
+                System.out.print(dp[i][j] + "\t");
+            }
+            System.out.println();
+        }
         return dp[n][N];
     }
 }
+//Yea I got the same .
+// Yea I got the same .
