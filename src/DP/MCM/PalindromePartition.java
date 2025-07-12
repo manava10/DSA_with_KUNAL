@@ -1,32 +1,29 @@
 package DP.MCM;
-public class PalindromePartition{
+import java.util.*;
+class PalindromePartition{
     public static void main(String[] args) {
-        String given = "aaaaa";
-        //We have given a string , We have to find the minimum no of cuts so that all the parts are in palindrome.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the string :");
+        String input = sc.nextLine();
         int i = 0;
-        int j = given.length()-1;
-        if(given.length()==0){
-            System.out.println("Not possible to make palindrome");
-        }else{
-            System.out.println("The minimum no of cuts required so that the given string is partioned to make each part a Palindrome is :"+ minWays(given,i,j));
-        }
-
+        int j = input.length()-1;
+        System.out.println("The min of number of cut required is :"+ ways(input,i,j));
     }
-    static int minWays(String s,int i, int j){
-        if((i==j) || isPalindrome(s,i,j)){
+    static int ways(String input,int i, int j){
+        //First of all we well check if the given string is Palindrome
+        if(isPalindrome(input,i,j)){
             return 0;
         }
         int minCut = Integer.MAX_VALUE;
-        for(int k = i;k<j;k++){
-            int cutCost1 = minWays(s,i,k);
-            int cutCost2 = minWays(s,k+1,j);
-            int result = cutCost1+cutCost2+1;
-            minCut = Math.min(minCut,result);
+        for(int k=i;k<j;k++){
+            int left = ways(input,i,k);
+            int right = ways(input,k+1,j);
+            int cost = left+right+1;
+            minCut = Math.min(minCut,cost);
         }
         return minCut;
     }
     static boolean isPalindrome(String s,int i,int j){
-        //this method is to find the if a given string is Palindrome or not.
         while(i<j){
             if(s.charAt(i)!=s.charAt(j)){
                 return false;
@@ -37,6 +34,3 @@ public class PalindromePartition{
         return true;
     }
 }
-//This pure recursive code is not much optimized, a little optimized code.
-//This is pure Recursive code. Now i will memoize it to get the little optimized Version .
-// So, i have written this . I am a little bit pround of myself.

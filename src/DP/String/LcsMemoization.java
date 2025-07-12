@@ -13,12 +13,13 @@ class LcsMemoization{
         System.out.println("The length of lcs is :"+lcsLeng(s1,s2,0,0,dp));
     }
     public static int lcsLeng(String s1,String s2,int p, int k,int[][]dp){
-        if(s1.length()==p || s2.length()==k){
-            return 0;
-        }
         if(dp[p][k]!=-1){
             return dp[p][k];
         }
+        if(s1.length()==p || s2.length()==k){
+            return 0;
+        }
+
         if(s1.charAt(p)==s2.charAt(k)){
             dp[p][k] = 1+lcsLeng(s1,s2,p+1,k+1,dp);
             return dp[p][k];
