@@ -26,5 +26,3 @@ class EqualSumPartitionRecursion{
         return isEqual(arr,n-1,target);
     }
 }
-// Now i
-// Now i will optimize this without help of any thing .

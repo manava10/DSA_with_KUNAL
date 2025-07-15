@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PrintPath{
     public static void main(String[] args) {
-        System.out.println(printPath("",3,3));
+        System.out.println(printPath("",3,2));
         System.out.println();
         printPath1("",3,3);
 

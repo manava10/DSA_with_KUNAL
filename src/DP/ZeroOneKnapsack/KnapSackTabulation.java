@@ -19,7 +19,7 @@ public class KnapSackTabulation{
 
             }
         }
-        //I wannt print the dynamic Programming Table, Let's Do it . Yay..
+        //I want print the dynamic Programming Table, Let's Do it . Yay..
         System.out.println("DP Table:");
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j <= W; j++) {
