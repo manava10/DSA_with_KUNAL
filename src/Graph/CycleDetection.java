@@ -34,7 +34,8 @@ class CycleDetection{
         //Lets call the dfs function to see the dfs.
         graph.dfs(0);
         graph.bfs(0);
-        graph.isCyclic(0,-1);
+        graph.isCyclicBfs(0,-1);
+        graph.isCyclicDfs(0,-1);
     }
     public void dfs(int node){
         //So this is the function for the bfs, Now we will make a helper functionn to complete this.
@@ -47,14 +48,22 @@ class CycleDetection{
         System.out.println("The bfs traversal of the given graph is");
         bfsHelper(node,visited);
     }
-    public void isCyclic(int node , int parent){
-        if(isCyclicHelper(node,parent)){
-            System.out.println("The given graph  is Cyclic");
+    public void isCyclicBfs(int node , int parent){
+        if(isCyclicHelperBfs(node,parent)){
+            System.out.println("The given graph  is Cyclic, checked by Bfs");
         }else{
-            System.out.println("The given graph is acyclic");
+            System.out.println("The given graph is acyclic, checked by BFS");
         }
     }
-    private boolean isCyclicHelper(int node,int parent){
+    public void isCyclicDfs(int node,int parent){
+        boolean[] visited = new boolean[V];
+        if(isCyclicHelperDfs(node,parent,visited)){
+            System.out.println("The given graph is cyclic ,checke by DFS");
+        }else{
+            System.out.println("The given graph is acyclic,  checked  by bfs");
+        }
+    }
+    private boolean isCyclicHelperBfs(int node,int parent){
         boolean[] visited = new boolean[V];
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(node,parent));
@@ -70,6 +79,19 @@ class CycleDetection{
                 }else if(visited[neighbour] && neighbour!=par){
                     return true;
                 }
+            }
+        }
+        return false;
+    }
+    private boolean isCyclicHelperDfs(int node,int parent,boolean[] visited){
+        visited[node] = true;
+        for(int  neighbour : adj.get(node)){
+            if(!visited[neighbour]){
+                if(isCyclicHelperDfs(neighbour,node,visited)){
+                    return true;
+                }
+            }else if(neighbour!=parent){
+                return true;
             }
         }
         return false;
