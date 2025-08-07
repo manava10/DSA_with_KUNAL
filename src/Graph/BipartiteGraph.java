@@ -26,7 +26,6 @@ class BipartiteGraph {
         graph.addEdge(4, 5);
         graph.addEdge(5, 6);
         graph.addEdge(6, 0); // This will form an odd cycle → not bipartite
-        // Check bipartiteness
         if (graph.isGraphBipartite()) {
             System.out.println("The given graph is Bipartite using DfS.");
         } else {
