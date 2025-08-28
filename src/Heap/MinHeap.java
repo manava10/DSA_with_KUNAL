@@ -8,7 +8,7 @@ public class MinHeap {
         this.size = 0;
         this.heap = new int[capacity];
     }
-    //private method for indexting
+    //private method for indexin
     private int parent(int i){
         return (i-1)/2;
     }
